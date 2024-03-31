@@ -27,3 +27,10 @@ The Python version used was 3.9.13
 All details regarding exploratory data analysis, hypothesis, statiscal findings, feature selection, model selection and model hyperparameter tuning are fully documented and explained on the eda.ipynb file within the notebook folder of the project.
 
 ## 5) Solution Architecture: Modules, Pipeline and Application
+
+![image](https://github.com/T1burski/Fraudulent-Transaction-Classifier/assets/100734219/73f4760a-7072-457a-bb04-d72d331cb9e3)
+
+As said before, the whole project was built in a virtual environment in order to isolate dependencies, which are available in the requirements.txt file. Every module used in order to build the final application is available in the src folder. These modules cover all the steps in order to ingest, manipulate and process data as well as train and build the ML model, all isolated in order to facilitate the app's structure management. Above, an image that shows, in a simple way, the prject's structure and pipeline.
+
+## 6) ML Web App
+
