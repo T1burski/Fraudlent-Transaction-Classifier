@@ -30,32 +30,35 @@ All details regarding exploratory data analysis, hypothesis, statiscal findings,
 
 ![image](https://github.com/T1burski/Fraudulent-Transaction-Classifier/assets/100734219/73f4760a-7072-457a-bb04-d72d331cb9e3)
 
-As said before, the whole project was built in a virtual environment in order to isolate dependencies, which are available in the requirements.txt file. Every module used in order to build the final application is available in the src folder. These modules cover all the steps in order to ingest, manipulate and process data as well as train and build the ML model, all isolated in order to facilitate the app's structure management. Above, an image that shows, in a simple way, the prject's structure and pipeline.
+As said before, the whole project was built in a virtual environment in order to isolate dependencies, which are available in the requirements.txt file. Every module used in order to build the final application is available in the src folder. These modules cover all the steps in order to ingest, manipulate and process data as well as train and build the ML model, all isolated in order to facilitate the app's structure management. Above, an image that shows, in a simple way, the project's structure and pipeline.
 
 ## 6) ML Web App
 Below, screenshots of the Web App with brief explanations about each of them.
 
 ![image](https://github.com/T1burski/Fraudulent-Transaction-Classifier/assets/100734219/10c565a7-680a-483a-834f-876ebf8bac44)
+
 When you start the ML Web App, you'll see a brief presentation of it and a button that lets the user select how many transactions they want to apply the model on in order to label them as potential frauds or not.
 
 ======================================
 
 ![image](https://github.com/T1burski/Fraudulent-Transaction-Classifier/assets/100734219/f0b314ba-a7f1-40b6-b0bf-ce73a567c39e)
-Below, the user will be able to see each of the features used and their respective values. These values are generated using the data_generator.py module, which produces, for each variable, a random number between the min and the max values of that variable in the original dataset. Therefore, we have a simulator of transactions which will be labeled as fraudulent or not. Everytime the user changes the number of transactions they want to label, the whole app gets updated to show that number of transactions.
+
+Below (within the Web App), the user will be able to see each of the features used and their respective values. These values are generated using the data_generator.py module, which produces, for each variable, a random number between the min and the max values of that variable in the original dataset. Therefore, we have a simulator of transactions which will be labeled as fraudulent or not. Everytime the user changes the number of transactions they want to label, the whole app gets updated to show that number of transactions.
 
 ======================================
 
 ![image](https://github.com/T1burski/Fraudulent-Transaction-Classifier/assets/100734219/b54e981e-32c7-416b-b063-0e3a7f1de7c9)
+
 So, in the end, the generated transactions are print along with their classification according to the trained model. Also, a small report is printed showing, from all transactions generated, how many were and were not labeled as potential frauds. 
 
-## 6) Financial Impacts of the Model
+## 7) Financial Impacts of the Model
 After traininig the model on the training data, we tested it on unseen testing data. After applying it (more details can be seen in the eda.ipynb in the notebooks folder), the following results were obtained:
 
 Considering that a correct prediction if a transaction is a fraud provides the info necessary so that the financial institution cancels/locks the said transaction (protecting both the client and the institution), the Amount (EUR) associated with that transaction can be considered as "a value not moved in a wrong and illegal way", meaning this Amount can be seen as a financial gain. Following this logic, when the model was applied to the testing data, it correctly predicted that 52 of the 71 fraudulent transactions were potential frauds.
 
 ### The Amount associated to these 52 transactions was 7402.10 EUR, representing the financial impact of the model regarding the testing data (42559 total transactions)
 
-## 7) How to Use the ML Web App
+## 8) How to Use the ML Web App
 
 In order to test this tool yourself, you'll need to clone this repository in a folder in your computer and create a virtual environment using, in a terminal:
 
@@ -63,18 +66,18 @@ In order to test this tool yourself, you'll need to clone this repository in a f
 
 After, activate the virtual environment using in a terminal:
 
-class_transactions\Scripts\activate
+### class_transactions\Scripts\activate
 
 Install the necessary dependencies of the project using in a terminal:
 
-pip install -r requirements.txt
+### pip install -r requirements.txt
 
 So, run the following command to run the Web App in a terminal:
 
-streamlit run app.py
+### streamlit run app.py
 
 A tab will open in your browser and you'll be able to interact with the tool!
 
 To deactivate the virtual environment, in a terminal:
 
-deactivate
+### deactivate
