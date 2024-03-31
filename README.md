@@ -11,5 +11,19 @@ Financial institutions all over the world, specially the ones related to service
 
 With the advance of data-driven solutions such as machine learning algorithms, this task can be done. For example, supervised classification models based on historical data that represents the behaviour and occurrance can be trained in order to judge future transactions, labeling them as fraudulent or not. With this being said, the present project tackles this challenge using the mentioned strategy: through machine learning models, we will develop a tool that predicts if a transaction is fraudulent or not based on previous occurrances.
 
-## 1) The Data
-Real data from transactions made by credit cards in September 2013 by European cardholders will be used to develop the ML model. The data can be obtained in https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud.  
+## 2) The Data
+Real data from transactions made by credit cards in September 2013 by European cardholders will be used to develop the ML model. The data can be obtained in https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud. The original dataset has 284807 transactions and 31 columns of which 30 are features regarding characteristics of the transactions and the other column states if a the transaction was fraudulent (1) or not (0) (Class column). All features from V1 - V28 were anonymized using PCA, while features Amount and Time were not. As stated in the link provided previously, this dataset is highly imbalanced regarding the Class output: only 0.172% of all transactions in the original dataset are fraudulent transactions.
+
+Features V1 through V28 represent anonymized and various characteristics regarding the client and the transaction happening. Amount represents (hypothetically in EUR) the monetary amount of the transaction. Time represents the time elapsed between the current transaction and the first transaction in the dataset.
+
+## 3) Technologies That Help us Solve the Problem
+We have in our hands a Supervised Classification problem. Using a venv using pip, we develop the model using Visual Studio Code with Python language with various libraries such as Pandas, Numpy, XGBoost and SKLearn. Finally, we deploy our model in a web app made with Streamlit.
+
+![image](https://github.com/T1burski/Fraudulent-Transaction-Classifier/assets/100734219/937b5676-059e-4089-9889-8671ab234608)
+
+The Python version used was 3.9.13
+
+## 4) Exploring and Building the Solution
+All details regarding exploratory data analysis, hypothesis, statiscal findings, feature selection, model selection and model hyperparameter tuning are fully documented and explained on the eda.ipynb file within the notebook folder of the project.
+
+## 5) Solution Architecture: Modules, Pipeline and Application
