@@ -35,7 +35,7 @@ if __name__ == "__main__":
     each feature to be used afterwards
     '''
 
-    df = pd.read_csv("data\creditcard.csv")
+    df = pd.read_parquet("data\df.parquet.gzip")
     df = df[['V4', 'V10', 'V12', 'V14', 'V20']]
 
     dict_mm = {}

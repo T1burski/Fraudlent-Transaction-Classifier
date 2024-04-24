@@ -1,8 +1,6 @@
 from data_ingestion import DataIngestion
 from data_preprocessing import DataPreprocessor
 from model_functions import ModelFunctions
-import numpy as np
-import pandas as pd
 import pickle
 
 '''
@@ -12,7 +10,7 @@ Everytime the model needs to be retrained with new data,
 run this script
 '''
 
-data_source = "data\creditcard.csv"
+data_source = "data\df.parquet.gzip"
 
 data = DataIngestion(data_path=data_source).load_data()
 
