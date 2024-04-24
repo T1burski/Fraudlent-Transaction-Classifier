@@ -16,7 +16,7 @@ class DataIngestion:
         so we convert it to pandas format, returning it
         '''
         try:
-            data = pd.read_csv(self.data_path)
+            data = pd.read_parquet(self.data_path)
             return data
         
         except FileNotFoundError:
